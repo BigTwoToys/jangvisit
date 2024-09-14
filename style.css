@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+
+.video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 400px) {
+  .video{
+    float: none;
+    width: 100%;
+  }
+}
+
+@media (min-aspect-ratio: 16/9){
+    .video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9){
+    .video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+        rgb(18, 17, 17,0.75), rgb(23, 23, 23,0.75));
+    background-size: cover;
+    background-position:center;
+
+}
+
+
+.navbar{
+    height: 80px;
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 250px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: rotateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content h4{
+    font-size: 40px;
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.card{
+    width: 200px;
+    padding: 5px 0;
+    text-align: center;
+    margin: 20px 10px;
+    font-weight: bold;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+@media (max-width:992px){
+  .background{
+    padding:1.3rem 5%
+  }
+}
+
